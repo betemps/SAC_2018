@@ -1,0 +1,172 @@
+\begin{thebibliography}{10}
+
+\bibitem{alves2016large}
+M.~A. Alves, M.~Diener, P.~C. Santos, and L.~Carro.
+\newblock Large vector extensions inside the hmc.
+\newblock In {\em DATE 2016}, pages 1249--1254. IEEE, 2016.
+
+\bibitem{ARM:2017}
+{ARM Ltd.}
+\newblock \url{http://www.arm.com/}, 2017.
+\newblock [Online. Accessed 10-Jul-2017].
+
+\bibitem{beica2015_3D_Integration}
+R.~Beica.
+\newblock 3d integration: Applications and market trends.
+\newblock In {\em 3DIC 2015}, pages TS5--1. IEEE, 2015.
+
+\bibitem{binkert2011gem5}
+N.~Binkert et~al.
+\newblock The gem5 simulator.
+\newblock {\em SIGARCH Comput. Archit. News}, 39(2):1--7, Aug. 2011.
+
+\bibitem{conte_in_hennessypatterson:2012}
+T.~M. Conte.
+\newblock {\em Embedded Systems}.
+\newblock Appendix E in \cite{hennessypatterson:2012}.
+
+\bibitem{gem5:2017}
+gem5.
+\newblock {The gem5 Simulator - A modular platform for computer-system
+  architecture research}.
+\newblock \url{http://gem5.org/Main_Page}, 2017.
+\newblock [Online. Accessed 10-Jul-2017].
+
+\bibitem{gokhale2015HMC_Charac_wrklds}
+M.~Gokhale, S.~Lloyd, and C.~Macaraeg.
+\newblock Hybrid memory cube performance characterization on data-centric
+  workloads.
+\newblock In {\em Irregular Applications: Architectures and Algorithms, 5th
+  Workshop on}, page~7. ACM, 2015.
+
+\bibitem{Guthaus:2001:Mibench}
+M.~R. Guthaus, J.~S. Ringenberg, D.~Ernst, T.~M. Austin, T.~Mudge, and R.~B.
+  Brown.
+\newblock Mibench: A free, commercially representative embedded benchmark
+  suite.
+\newblock In {\em WWC 2001}, pages 3--14, Washington, DC, USA, 2001. IEEE
+  Computer Society.
+
+\bibitem{hennessypatterson:2012}
+J.~L. Hennessy and D.~A. Patterson.
+\newblock {\em Computer architecture: a quantitative approach}.
+\newblock Elsevier, 5th edition, 2012.
+
+\bibitem{HiTechGlobal_HMC}
+{HiTech Global, LLC}.
+\newblock {Hybrid Memory Cube (HMC) Module}.
+\newblock
+  \url{http://www.hitechglobal.com/Accessories/HybridMemoryCube-HMC.htm}, 2017.
+\newblock [Online. Accessed 09-Sept-2017].
+
+\bibitem{hmc2_1_Specification}
+HMCC.
+\newblock Hybrid memory cube specification rev. 2.1, 2014.
+\newblock [Online. Accessed 10-Jul-2017].
+
+\bibitem{hmc_Consortium}
+HMCC.
+\newblock Hybrid memory cube consortium.
+\newblock \url{http://www.hybridmemorycube.org/}, 2017.
+\newblock [Online. Accessed 10-Jul-2017].
+
+\bibitem{CACTI:2017}
+HP.
+\newblock Cacti - an integrated cache and memory access time, cycle time, area,
+  leakage, and dynamic power model.
+\newblock \url{http://www.hpl.hp.com/research/cacti/}, 2008.
+\newblock [Online. Accessed 07-Jul-2017].
+
+\bibitem{jeddeloh2012HMC}
+J.~Jeddeloh and B.~Keeth.
+\newblock Hybrid memory cube new dram architecture increases density and
+  performance.
+\newblock In {\em VLSIT 2012}, pages 87--88. IEEE, 2012.
+
+\bibitem{jeon2017cashmc}
+D.-I. Jeon and K.-S. Chung.
+\newblock Cashmc: A cycle-accurate simulator for hybrid memory cube.
+\newblock {\em Computer Archit. Letters}, 16(1):10--13, 2017.
+
+\bibitem{jouppi2015cacti-IO}
+N.~P. Jouppi, A.~B. Kahng, N.~Muralimanohar, and V.~Srinivas.
+\newblock Cacti-io: Cacti with off-chip power-area-timing models.
+\newblock {\em VLSI Systems}, 23(7):1254--1267, 2015.
+
+\bibitem{Malladi:2012}
+K.~T. Malladi, B.~C. Lee, F.~A. Nothaft, C.~Kozyrakis, K.~Periyathambi, and
+  M.~Horowitz.
+\newblock Towards energy-proportional datacenter memory with mobile dram.
+\newblock In {\em ISCA 2012}, pages 37--48, Washington, DC, USA, 2012. IEEE
+  Computer Society.
+
+\bibitem{marwedel2006embedded}
+P.~Marwedel.
+\newblock {\em Embedded system design}, volume~1.
+\newblock Springer, 2006.
+
+\bibitem{Micron:HMC_DataSheet:2010}
+Micron.
+\newblock Hmc gen2 (hmc-15g-sr) data sheet.
+\newblock
+  \url{https://www.micron.com/products/hybrid-memory-cube/short-reach-hmc},
+  2010.
+\newblock [Online. Accessed 21-Aug-2017].
+
+\bibitem{nair2015active}
+R.~Nair et~al.
+\newblock Active memory cube: A processing-in-memory architecture for exascale
+  systems.
+\newblock {\em IBM Journal of Research and Development}, 59(2/3):17--1, 2015.
+
+\bibitem{pawlowski2011HybridMC}
+J.~T. Pawlowski.
+\newblock Hybrid memory cube (hmc).
+\newblock In {\em Hot Chips 23 Symposium}, pages 1--24. IEEE, 2011.
+
+\bibitem{rosenfeld2014performance}
+P.~Rosenfeld.
+\newblock {\em Performance exploration of the hybrid memory cube}.
+\newblock PhD thesis, University of Maryland (College Park, Md.), 2014.
+
+\bibitem{santos2016exploring}
+P.~C. Santos, M.~A. Alves, M.~Diener, L.~Carro, and P.~O. Navaux.
+\newblock Exploring cache size and core count tradeoffs in systems with reduced
+  memory access latency.
+\newblock In {\em PDP 2016}, pages 388--392. IEEE, 2016.
+
+\bibitem{suresh2014evaluation}
+A.~Suresh, P.~Cicotti, and L.~Carrington.
+\newblock Evaluation of emerging memory technologies for hpc, data intensive
+  applications.
+\newblock In {\em CLUSTER 2014}, pages 239--247. IEEE, 2014.
+
+\bibitem{wang2015enabling}
+S.~Wang, Y.~Song, M.~N. Bojnordi, and E.~Ipek.
+\newblock Enabling energy efficient hybrid memory cube systems with erasure
+  codes.
+\newblock In {\em ISLPED 2015}, pages 67--72. IEEE, 2015.
+
+\bibitem{WiltonJouppi:CACTI:1996}
+S.~J.~E. Wilton and N.~P. Jouppi.
+\newblock Cacti: an enhanced cache access and cycle time model.
+\newblock {\em IEEE Journal of Solid-State Circuits}, 31(5):677--688, May 1996.
+
+\bibitem{wolf2012:computers}
+M.~Wolf.
+\newblock {\em Computers as Components: Principles of Embedded Computing System
+  Design}.
+\newblock Morgan Kaufmann, 2012.
+
+\bibitem{zhang2014survey}
+Y.~Zhang, L.~Li, Z.~Lu, A.~Jantsch, M.~Gao, H.~Pan, and F.~Han.
+\newblock A survey of memory architecture for 3d chip multi-processors.
+\newblock {\em Microprocessors and Microsystems}, 38(5):415--430, 2014.
+
+\bibitem{zou2015Heterogeneous3D}
+Q.~Zou, M.~Poremba, R.~He, W.~Yang, J.~Zhao, and Y.~Xie.
+\newblock Heterogeneous architecture design with emerging 3d and non-volatile
+  memory technologies.
+\newblock In {\em ASP-DAC 2015}, pages 785--790. IEEE, 2015.
+
+\end{thebibliography}

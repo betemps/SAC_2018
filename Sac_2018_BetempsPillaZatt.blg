@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Sac_2018_BetempsPillaZatt.aux
+The style file: abbrv.bst
+Database file #1: Sac_2018_BetempsPillaZatt.bib
+You're missing a field name---line 230 of file Sac_2018_BetempsPillaZatt.bib
+ : 
+ : %  howpublished = "\url{http://hdl.handle.net/1903/15372}",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 379 of file Sac_2018_BetempsPillaZatt.bib
+ :  
+ :  %series = {DAC '14},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 421 of file Sac_2018_BetempsPillaZatt.bib
+ :  
+ :  %series = {SIMUTOOLS '12},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 472 of file Sac_2018_BetempsPillaZatt.bib
+ : @misc{CACTI:2017
+ :                 ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 535 of file Sac_2018_BetempsPillaZatt.bib
+ : 
+ : %  URL = {https://www.amazon.com/Computers-Components-Principles-Computing-Architecture-ebook/dp/B0089WJ2J6%3FSubscriptionId%3D0JYN1NVW651KCA56C102%26tag%3Dtechkie-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0089WJ2J6}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 546 of file Sac_2018_BetempsPillaZatt.bib
+ : 
+ : %  URL = {https://www.amazon.com/High-Performance-Embedded-Computing-Applications-Cyber-Physical-ebook/dp/B00JDD9YDY%3FSubscriptionId%3D0JYN1NVW651KCA56C102%26tag%3Dtechkie-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00JDD9YDY}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty chapter and pages in conte_in_hennessypatterson:2012
+Warning--empty publisher in conte_in_hennessypatterson:2012
+Warning--empty year in conte_in_hennessypatterson:2012
+You've used 29 entries,
+            2118 wiz_defined-function locations,
+            674 strings with 8450 characters,
+and the built_in function-call counts, 10121 in all, are:
+= -- 1025
+> -- 439
+< -- 12
++ -- 177
+- -- 146
+* -- 623
+:= -- 1619
+add.period$ -- 103
+call.type$ -- 29
+change.case$ -- 153
+chr.to.int$ -- 0
+cite$ -- 32
+duplicate$ -- 408
+empty$ -- 833
+format.name$ -- 146
+if$ -- 2211
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 25
+newline$ -- 153
+num.names$ -- 58
+pop$ -- 225
+preamble$ -- 1
+purify$ -- 129
+quote$ -- 0
+skip$ -- 291
+stack$ -- 0
+substring$ -- 546
+swap$ -- 120
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 108
+warning$ -- 3
+while$ -- 100
+width$ -- 31
+write$ -- 334
+(There were 6 error messages)

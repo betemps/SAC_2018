@@ -1,0 +1,304 @@
+#Energy vs Time
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/Ener_Vs_Time.pdf")
+plot(EDA_P$Energy, EDA_P$Time, xlab="Energy (J)", ylab="Time (s)", xlim=c(-0.2,0.9), 
+main="Energy vs Time", pch=ifelse(EDA_P$Memory=="HMC", 0, 1), cex.main=1.5, frame.plot=TRUE,  
+col=ifelse(EDA_P$Memory=="HMC", "red", "blue"))
+text(EDA_P$Energy, EDA_P$Time, row.names(EDA_P),cex=0.8, pos=4, col=ifelse(EDA_P$Memory=="HMC", "red", "blue"))
+legend("topleft", inset=.05, bty="n", cex=.9, title="Main Memory Type",
+           c("HMC", "DDR3"), col=c("red", "blue"), pch=c(0,1))
+dev.off()
+
+
+
+# Gerar Grafico 3D EDAP
+
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/EDAP.pdf")
+library(scatterplot3d)
+# create column indicating point color
+EDA_P$pcolor[EDA_P$Memory=="HMC"] <- "red"
+EDA_P$pcolor[EDA_P$Memory=="DDR3"] <- "blue"
+with(EDA_P, {
+    s3d <- scatterplot3d(Energy, Time, Area,        # x y and z axis
+                         color=pcolor, pch=ifelse(EDA_P$Memory=="HMC", 0, 1),   
+                         type="h", lty.hplot=2,
+                         scale.y=.75,
+                         xlab="Energy (J)",
+                         ylab="Time (s)",
+                         zlab="Area (mm²)")
+    s3d.coords <- s3d$xyz.convert(Energy, Time, Area)
+    text(s3d.coords$x, s3d.coords$y, 
+         labels=row.names(EDA_P), 
+         pos=3, cex=.8)  
+    # add the legend
+    legend("topleft", inset=.05,      # location and inset
+           bty="n", cex=.9,              # suppress legend box, shrink text 50%
+           title="Main Memory Type",
+           c("HMC", "DDR3"), col=c("red", "blue"), pch=c(0,1))
+})
+dev.off()
+
+
+
+
+
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/EDAP.pdf")
+library(scatterplot3d)
+# create column indicating point color
+EDA_P$pcolor[EDA_P$Memory=="HMC"] <- "red"
+EDA_P$pcolor[EDA_P$Memory=="DDR3"] <- "blue"
+with(EDA_P, {
+    s3d <- scatterplot3d(Energy, Time, Area,        # x y and z axis
+                         color=pcolor, pch=19,        # circle color indicates no. of cylinders
+                         type="h", lty.hplot=2,       # lines to the horizontal plane
+                         scale.y=.75,                 # scale y axis (reduce by 25%)
+                         main="Energy, Time, and Area Scatter Plot per Configuration (L2 size, L1i&d size)",
+                         xlab="Energy (J)",
+                         ylab="Time (s)",
+                         zlab="Area (mm²)")
+    s3d.coords <- s3d$xyz.convert(Energy, Time, Area)
+    text(s3d.coords$x, s3d.coords$y,     # x and y coordinates
+         labels=EDA_P$X1,       # text to plot
+         pos=3, cex=.6)                  # shrink text 50% and place to right of points)
+    # add the legend
+    legend("topleft", inset=.05,      # location and inset
+           bty="n", cex=.9,              # suppress legend box, shrink text 50%
+           title="Main Memory Type",
+           c("HMC", "DDR3"), fill=c("red", "blue"))
+})
+dev.off()
+
+
+#*************************************************
+#Gerar gráfico de Tempo de Execução
+
+
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/basicmath_ET.pdf")
+plot(basicmath$HMC, axes=FALSE, type = "o", pch=1, xlab="", ylab="Time (s)", col="blue", ylim=c(-0.01,0.35), 
+main="basicmath Application Execution Time", )
+par(mar=c(7.1,4.1,4.1,2.1))
+lines(basicmath$DDR3, type = "o", pch=2,col = "red")
+axis(2, cex.axis=0.8)
+axis(1, cex.axis=0.7,at=seq_along(basicmath$X1),labels=as.character(basicmath$X1), las=3, cex.lab=0.5)
+legend("topright",
+       c("HMC","DDR3"),
+       lty=c(pch=1,pch=2), 
+       lwd=c(1.0,1.0),col=c("blue","red"), pch=c(1,2))
+box()
+dev.off()
+
+
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/blowfish_ET.pdf")
+plot(blowfish$HMC, axes=FALSE, type = "o", pch=1, xlab="", ylab="Time (s)", col="blue", ylim=c(-0.01,0.35), 
+main="blowfish (enc.) Application Execution Time", )
+par(mar=c(7.1,4.1,4.1,2.1))
+lines(blowfish$DDR3, type = "o", pch=2,col = "red")
+axis(2, cex.axis=0.8)
+axis(1, cex.axis=0.7,at=seq_along(blowfish$X1),labels=as.character(blowfish$X1), las=3, cex.lab=0.5)
+legend("topright",
+       c("HMC","DDR3"),
+       lty=c(pch=1,pch=2), 
+       lwd=c(1.0,1.0),col=c("blue","red"), pch=c(1,2))
+box()
+dev.off()
+
+
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/typeset_ET.pdf")
+plot(typeset$HMC, axes=FALSE, type = "o", pch=1, xlab="", ylab="Time (s)", col="blue", ylim=c(-0.01,0.35), 
+main="typeset Application Execution Time", )
+par(mar=c(7.1,4.1,4.1,2.1))
+lines(typeset$DDR3, type = "o", pch=2,col = "red")
+axis(2, cex.axis=0.8)
+axis(1, cex.axis=0.7,at=seq_along(typeset$X1),labels=as.character(typeset$X1), las=3, cex.lab=0.5)
+legend("topright",
+       c("HMC","DDR3"),
+       lty=c(pch=1,pch=2), 
+       lwd=c(1.0,1.0),col=c("blue","red"), pch=c(1,2))
+box()
+dev.off()
+
+
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/patricia_ET.pdf")
+plot(patricia$HMC, axes=FALSE, type = "o", pch=1, xlab="", ylab="Time (s)", col="blue", ylim=c(-0.01,0.35), 
+main="patricia Application Execution Time", )
+par(mar=c(7.1,4.1,4.1,2.1))
+lines(patricia$DDR3, type = "o", pch=2,col = "red")
+axis(2, cex.axis=0.8)
+axis(1, cex.axis=0.7,at=seq_along(patricia$X1),labels=as.character(patricia$X1), las=3, cex.lab=0.5)
+legend("topright",
+       c("HMC","DDR3"),
+       lty=c(pch=1,pch=2), 
+       lwd=c(1.0,1.0),col=c("blue","red"), pch=c(1,2))
+box()
+dev.off()
+
+#Gerar grafico de energia
+
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/Energy_ALL_APP.pdf")
+plot(Energy$HMC, axes=FALSE, type = "o", pch=1, xlab="", ylab="Energy (J)", col="red", ylim=c(-0.01,0.65), 
+main="Energy Consumption for All Applications", )
+par(mar=c(7.1,4.1,4.1,2.1))
+lines(Energy$DDR3, type = "o", pch=2,col = "blue")
+axis(2, cex.axis=0.8)
+axis(1, cex.axis=0.7,at=seq_along(Energy$X1),labels=as.character(Energy$X1), las=3, cex.lab=0.5)
+legend("topright",
+       c("HMC","DDR3"),
+       lty=c(pch=1,pch=2), 
+       lwd=c(1.0,1.0),col=c("blue","red"), pch=c(1,2))
+box()
+dev.off()
+
+
+#Gerar grafico de EDP
+
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/EDP.pdf")
+plot(EDP$HMC, axes=FALSE, type = "o", pch=1, xlab="", ylab="EDP", col="red", ylim=c(-0.05,0.25), 
+main="Energy Delay Product", )
+par(mar=c(7.1,4.1,4.1,2.1))
+lines(EDP$DDR3, type = "o", pch=2,col = "blue")
+axis(2, cex.axis=0.8)
+axis(1, cex.axis=0.7,at=seq_along(EDP$X1),labels=as.character(EDP$X1), las=3, cex.lab=0.6)
+legend("topright",
+	   c("HMC","DDR3"),
+	   lty=c(pch=1,pch=2), 
+	   lwd=c(1.0,1.0),col=c("blue","red"), pch=c(1,2))
+box()
+dev.off()
+
+
+#Gerar grafico de EDAP
+
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/EDAP.pdf")
+plot(EDAP$HMC, axes=FALSE, type = "o", pch=1, xlab="", ylab="EDAP", col="red", ylim=c(-20.0,355.0), 
+main="Energy Delay Area Product", )
+par(mar=c(7.1,4.1,4.1,2.1))
+lines(EDAP$DDR3, type = "o", pch=2,col = "blue")
+axis(2, cex.axis=0.8)
+axis(1, cex.axis=0.7,at=seq_along(EDAP$X1),labels=as.character(EDAP$X1), las=3, cex.lab=0.5)
+legend("topright",
+	   c("HMC","DDR3"),
+	   lty=c(pch=1,pch=2), 
+	   lwd=c(1.0,1.0),col=c("blue","red"), pch=c(1,2))
+box()
+dev.off()
+
+
+#Execution Time (all)
+pdf("/home/betemps/Dropbox/DisciplinasUFPel/2017-1 - Hierarquias Avançadas de Memória - TECII/HAM-Work/images/graficos/Exec_Time-ALL.pdf")
+plot(ExecutionTime$HMC, axes=FALSE, type = "o", pch=1, xlab="", ylab="Time (s)", col="blue", ylim=c(-0.01,0.35), 
+main="All Applications Execution Time", )
+par(mar=c(7.1,4.1,4.1,2.1))
+lines(ExecutionTime$DDR3, type = "o", pch=2,col = "red")
+axis(2, cex.axis=0.8)
+axis(1, cex.axis=0.7,at=seq_along(ExecutionTime$X1),labels=as.character(ExecutionTime$X1), las=3, cex.lab=0.5)
+legend("topright",
+       c("HMC","DDR3"),
+       lty=c(pch=1,pch=2), 
+       lwd=c(1.0,1.0),col=c("blue","red"), pch=c(1,2))
+box()
+dev.off()
+
+
+
+
+
+
+
+
+
+
+
+# library
+library(likert) 
+ 
+# Use a provided dataset
+data(basicmath_perc) 
+items <- basicmath_perc[, substr(names(basicmath_perc), 1, 5) == "ST24Q"] 
+ 
+# Realize the plot
+l28 <- likert(items28) 
+summary(l28) 
+plot(l28)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+library(scatterplot3d)
+with(EDA_P, {
+   s3d <- scatterplot3d(Energy, Time, Area,        # x y and z axis
+                 color="blue", pch=19,        # filled blue circles
+                 type="h", lty.hplot=2,                    # vertical lines to the x-y plane
+                 main="Energy, Time, and Area 3D Scatter Plot",
+                 xlab="Energy (J.)",
+                 ylab="Time (s.)",
+                 zlab="Area (mm²)")
+    s3d.coords <- s3d$xyz.convert(Energy, Time, Area) # convert 3D coords to 2D projection
+    text(s3d.coords$x, s3d.coords$y,             # x and y coordinates
+         labels=EDA_P$X1,               # text to plot
+         cex=.5, pos=4)           # shrink text 50% and place to right of points)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+library(scatterplot3d)
+# create column indicating point color
+mtcars$pcolor[mtcars$cyl==4] <- "red"
+mtcars$pcolor[mtcars$cyl==6] <- "blue"
+mtcars$pcolor[mtcars$cyl==8] <- "darkgreen"
+with(mtcars, {
+    s3d <- scatterplot3d(disp, wt, mpg,        # x y and z axis
+                  color=pcolor, pch=19,        # circle color indicates no. of cylinders
+                  type="h", lty.hplot=2,       # lines to the horizontal plane
+                  scale.y=.75,                 # scale y axis (reduce by 25%)
+                  main="3-D Scatterplot Example 4",
+                  xlab="Displacement (cu. in.)",
+                  ylab="Weight (lb/1000)",
+                  zlab="Miles/(US) Gallon")
+     s3d.coords <- s3d$xyz.convert(disp, wt, mpg)
+     text(s3d.coords$x, s3d.coords$y,     # x and y coordinates
+          labels=row.names(mtcars),       # text to plot
+          pos=4, cex=.5)                  # shrink text 50% and place to right of points)
+# add the legend
+legend("topleft", inset=.05,      # location and inset
+    bty="n", cex=.5,              # suppress legend box, shrink text 50%
+    title="Number of Cylinders",
+    c("4", "6", "8"), fill=c("red", "blue", "darkgreen"))
+})
+
+
